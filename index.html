@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5/dark.css">
+    <link rel="icon" href="./assets/logo.jpg">
+    <title>Madridistas!</title>
+</head>
+<body>
+    <header>
+        <h1>Hola Madridistas!</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">#HALAMADRID!</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#jersey">Kits</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#ticket">Ticket</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+    <section>
+        <!-- menambahkan carousel dari bootstrap 5.5.3 -->
+        <div class="carousel">
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./assets/realmadrid.png" class="d-block w-100" alt="new-kits">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./assets/ucl15.jpg" class="d-block w-100" alt="ucl-champs">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./assets/laliga.jpg" class="d-block w-100" alt="liga-champs">
+                  </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+    </section>
+
+    <section id="match" class="container mt-5">
+        <div class="row">
+          <div class="col">
+            <h2>Transfer Update :</h2>
+            <h3>Mbappe Join Real Madrid</h3>
+            <p>Kylian Mbappe has signed a contract to join Real Madrid on a free transfer when his Paris St-Germain deal expires on 30 June.
+
+                The France striker verbally agreed to move to the Bernabeu in February and then announced in May he would leave PSG at the end of the season.
+                
+                Mbappe, 25, has now signed terms with Real Madrid and will move to Spain when the La Liga transfer window opens on 1 July.
+                
+                Madrid are expected to announce the deal next week and could formally present the forward at the Bernabeu before Euro 2024.
+                
+                Mbappe, a World Cup winner in 2018, is PSG's record goalscorer with 256 goals since he joined them from Monaco on an initial loan in 2017.</p>
+            <img src="./assets/mbappe.png" alt="">
+          </div>
+        </div>
+      </section>
+
+    <section id="jersey">
+        <div class="card">
+            <img src="./assets/jude.png" alt="24/25">
+            <div class="card-content">
+                <h2>24/25 Home-Kits</h2>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./assets/keper.png" alt="24/25">
+            <div class="card-content">
+                <h2>24/25 Keeper-Kits</h2>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./assets/fedee.png" alt="">
+            <div class="card-content">
+                <h2>24/25 Home-Kits</h2>
+            </div>
+        </div>
+    </section>
+
+    <section id="ticket">
+        <div>
+            <div class="booking">
+                <h1>Get Your Ticket Now!</h1>
+            </div>
+            <div class="card p-4 mx-auto" style="width: 600px;">
+                <h2 class="text-center">Vamos a reservar ahora!</h2>
+                <!-- membuat form -->
+                <form class="row g-3">
+                    <div class="col-6">
+                      <label for="nama" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama" required>
+                    </div>
+                    <div class="col-6">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" placeholder="eg. madridistas@yahoo.com" required>
+                    </div>
+                    <div class="col-6">
+                        <label for="jumlah" class="form-label">Total</label>
+                        <input type="number" class="form-control" id="jumlah" placeholder="Amount of Ticket" required>
+                    </div>
+                    <div class="Pembayaran">
+                        <label class="form-label">Payment :</label><br>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="payment" id="madridistas" value="madridistas" onclick="checkPayment()">
+                            <label class="form-check-label" for="madridistas">Madridistas-card</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="payment" id="E-Money" value="E-Money" onclick="checkPayment()">
+                            <label class="form-check-label" for="E-Money">E-Money</label>
+                        </div>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <label class="form-check-label" for="agree">I agree to the terms and conditions</label>
+                        <input type="checkbox" class="form-check-input" id="agree" required>
+                    </div>
+                    
+                    <div class="btn">
+                        <button type="button" onclick="handleSubmission()" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script/main.js"></script>
+
+
+</body>
+</html>

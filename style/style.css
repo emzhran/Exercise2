@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(181, 214, 221);
+}
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.booking h1{
+    text-align: center;
+}
+
+
+.card {
+    width: 300px;
+    margin: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* mengatur elemen h2 pada class card */
+.card h2{
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+/* mengatur elemen img pada class card */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+/* mengatur class card-content */
+.card-content {
+    padding: 20px;
+}
+
+/* mengatur elemen h2 pada class h2 */
+.card-content h2 {
+    margin-top: 0;
+}
